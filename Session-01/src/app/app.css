@@ -1,0 +1,11 @@
+h1{
+
+    text-align: center;
+    background-color: aquamarine;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+}

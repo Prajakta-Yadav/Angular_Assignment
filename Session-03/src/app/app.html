@@ -1,0 +1,14 @@
+<h1>This is Interpolation Method {{name}}</h1>
+
+<h3>Total: {{price * quantity}}</h3>
+
+<h2>Age: {{age >=18 ? "Adult" : "Junior"}}</h2>
+
+<h3>{{getMessage()}}</h3>
+
+
+<button (click)="changeName()">Change Name</button>
+
+<img [src]="imageUrl" alt="">
+
+<button [disabled] ="isDisabled">Submit</button>
