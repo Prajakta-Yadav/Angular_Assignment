@@ -1,0 +1,124 @@
+<a routerLink="user">User</a>
+
+<router-outlet></router-outlet>
+
+<!--1-->
+<p>Name:{{name}}</p>
+
+<p>City: {{city}}</p>
+
+<!--2-->
+<p>Addition: {{num1 + num2}}</p>
+
+<!--3-->
+
+<p>Date: {{CurrentDate}}</p>
+
+<!--4-->
+
+<p>Student name: {{student.Sname}}</p>
+<p>Student city: {{student.Scity}}</p>
+
+<!--5-->
+
+<p>{{getMessage()}}</p>
+
+<!--6-->
+
+<img [src]="imageUrl" alt="" srcset=""> <br><br>
+
+<!--7-->
+
+<button [disabled]="isDisabled">click me</button> <br><br>
+
+
+<!--8-->
+<p [class.active]="false">This is always active</p>
+
+<p [class.active]="true">This is always active. here applied CSS</p>
+<p [class.active]="false">This is always active</p>
+
+<!--9-->
+
+<input type="text" [value]="Susername" name="" id="">
+
+<!--10-->
+
+<h3 [style.color]="'blue'">Dynamic Style Applied</h3>
+
+<!--11-->
+
+<button (click)="showMessage()">ShowMsg</button>
+<p>{{message}}</p>
+
+<!--12-->
+<input type="text" (input)="getTyping($event)">
+<p>{{data}}</p>
+
+<!--13-->
+<button (click)="incrementCount()">Increment</button>
+<button (click)="decrementCount()">Decrement</button>
+<p>{{count}}</p>
+
+<!--14-->
+<div (mouseover)="mouseOver()" (mouseout)="mouseOut()">Hover me</div> <br><br>
+
+<!--15-->
+<form (submit)="onSubmit($event)"> 
+    <label for="name">Name:</label>
+    <input type="text" name="name" [(ngModel)]="fname"> <br> <br>
+
+    <button type="submit">Submit</button> <br>
+
+    <p>{{finput}}</p>
+
+</form>
+
+<!--16-->
+<label for="name">Username: </label>
+<input type="text" [(ngModel)]="username" id=""> <br> <br>
+
+<button (click)="SubmitForm()">Submit</button> <br><br>
+
+<!--17-->
+<input type="text" [(ngModel)]="Ename">
+<p>First Name:{{Ename}}</p>
+
+
+<!--18-->
+
+<form (submit)="onApply($event)">
+
+    <label for="name">Name:</label><br>
+    <input type="text" [(ngModel)]="Name" placeholder="Enter name" required><br>
+
+    <label for="email">Email</label><br>
+    <input type="email" [(ngModel)]="Email" placeholder="enter email" required> <br>
+
+    <button type="submit">Submit</button>
+
+    <p>{{note}}</p>
+</form>
+
+<!--19-->
+<label>
+<input type="checkbox" [(ngModel)]="isChecked">
+Accept Terms & conditions
+</label>
+
+<p>Checkbox state: {{isChecked}}</p>
+<!--20-->
+
+<select [(ngModel)]="selectedOption">
+    <option value=""> -- Select an option--</option>
+    <option value="CSE">CSE</option>
+    <option value="BSC">BSc</option>
+    <option value="MTech">Mtech</option>
+</select>
+
+<p>Selected: {{selectedOption}}</p>
+<!--21-->
+
+<!--22-->
+
+

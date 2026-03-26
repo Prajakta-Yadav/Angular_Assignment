@@ -1,0 +1,15 @@
+<p>lifecycle works!</p>
+
+<!--App-card is a child and lifecycle is a parent. -->
+<p>card works!</p>
+<app-card 
+  [title]="'Card 1'" 
+  [description]="'First card'"
+  (buttonClick)="handleClick($event)">
+</app-card>
+
+<app-card 
+  [title]="'Card 2'" 
+  [description]="'Second card'"
+  (buttonClick)="handleClick($event)">
+</app-card>

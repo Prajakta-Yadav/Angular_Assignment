@@ -1,0 +1,17 @@
+.card{
+    
+    width: 80vh;
+    height: 67vh;
+    margin:0%;
+    padding: 10%;
+    background-color: aliceblue;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+p{
+    text-align: center;
+    font-size: 5%;
+    font-weight: bold;
+}

@@ -1,0 +1,15 @@
+.card{
+    
+    width: 20vh;
+    height: 80vh;
+    margin:0%;
+    padding: 10%;
+    background-color: aliceblue;
+}
+
+
+p{
+    text-align: center;
+    font-size: 5%;
+    font-weight: bold;
+}

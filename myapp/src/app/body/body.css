@@ -1,0 +1,17 @@
+.div{
+    width: 100%;
+    height: 80vh;
+    background-color: aquamarine;
+    text-align: center;
+    
+}
+
+div{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+h1{
+    text-align: center;
+}
