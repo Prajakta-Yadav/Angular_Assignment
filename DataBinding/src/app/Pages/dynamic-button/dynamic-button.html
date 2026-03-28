@@ -1,0 +1,8 @@
+<h2>Dynamic Button Control</h2>
+
+<label for="email">Email:</label>
+<input type="email" [(ngModel)] ="email" name="email">
+
+<br><br>
+
+<button [disabled]="!isValidemail()" (click)="submit()">Submit</button>

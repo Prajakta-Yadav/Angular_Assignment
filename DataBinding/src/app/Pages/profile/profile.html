@@ -1,0 +1,23 @@
+<h1>Profile Editor</h1>
+
+<label for="name">Name:</label>
+<input type="text" [(ngModel)] ="profile.name">
+
+<br><br>
+
+<label for="email">Email:</label>
+<input type="text" [(ngModel)]= "profile.email">
+
+<br><br>
+
+<label for="city">City:</label>
+<input type="text" [(ngModel)]= "profile.city">
+
+<br><br>
+<button (click)="updatePofile()">Updated Profile</button>
+<hr>
+
+<h3>Updated Profile</h3>
+<p>Name: {{updateProfile.Pname}}</p>
+<p>Email: {{updateProfile.Pemail}}</p>
+<p>City: {{updateProfile.Pcity}}</p>

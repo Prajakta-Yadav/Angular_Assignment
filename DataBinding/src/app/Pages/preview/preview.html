@@ -1,0 +1,18 @@
+<h1>Live Preview</h1>
+
+<label for="title">Title:</label>
+<input type="text" [(ngModel)] ="title" name="title">
+
+<br> <br>
+
+<label for="">Description:</label>
+<textarea [(ngModel)] ="description" name="description" id=""></textarea>
+
+<br><br>
+
+<button [disabled]="!isValidform()" (click)="save()">Save</button>
+<hr>
+
+<h3>Preview</h3>
+<p><strong>Title:</strong>{{title}}</p>
+<p><strong>Description:</strong>{{description}}</p>
