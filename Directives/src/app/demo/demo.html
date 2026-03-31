@@ -1,0 +1,64 @@
+<p>demo works!</p>
+
+<p>Date: {{date}}</p>
+
+<!--In traditional way we need to add every line *ngIf keyword separately. -->
+
+<p *ngIf="isVisible">This is If condition</p>
+
+<button (click)="toggle()">Toggle</button>
+
+<!--modern way 
+here we can add multiple statement if else condition under the single block. no need to write every line with@If else. once declare or create and add multiple stateent. -->
+
+@if (isChecked) {
+    <p>This is modern way if Condition</p>
+}@else{
+    <p>false condition</p>
+}
+
+
+<div *ngFor="let item of  item; let i= index"> 
+    
+    {{i+1}} -{{item}}
+
+</div>
+
+@for (a of arr; let i = $index; track a) {
+    <div>{{i+1}} - {{a}}</div>
+}
+
+<br> <hr>
+
+<div *ngFor="let s of students; let i = index">
+
+    {{s.id}} - {{s.name}}
+
+</div>
+<br><hr>
+
+@for (s of students; let i = $index; track s){
+    <div>
+        {{s.id}} - {{s.name}}
+    </div>
+}
+
+<div [ngSwitch]="role">
+
+    <p *ngSwitchCase="'admin'">Admin panel</p>
+    <p *ngSwitchCase="'user'">User panel</p>
+    <p *ngSwitchDefault="">Guest</p>
+
+</div>
+
+@switch (role) {
+    @case ('admin') {
+        <p>Admin panel Visible</p>
+    }
+    @case ('user') {
+        <p>User panel Visible</p>
+    }
+    @default {
+        <p>Guest user</p>
+    }
+}

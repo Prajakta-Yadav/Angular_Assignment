@@ -1,0 +1,14 @@
+.success{
+    color: green;
+    font-weight: bold;
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+}
+
+.active{
+    background-color: blue;
+    color: white;
+}

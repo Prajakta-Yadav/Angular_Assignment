@@ -1,0 +1,64 @@
+<p>directive works!</p>
+
+<!--1 NgIf -->
+
+<p *ngIf ="isVisible">This is ngIf example</p>
+
+@if(isVisible){
+    <p>this is if block</p>
+}@else {
+    <p>this is else block</p>
+}
+
+<button (click)="toggle()">toggle</button>
+
+
+@if(age >=18){
+    <p>Adult</p>
+} @else {
+    <p>Child</p>
+}
+
+<!--3 Attribute -->
+
+<p [ngClass]="{'highlight': 'active'}" class="!active">This is Attribute examples</p>
+
+
+<!---5 -->
+
+<ul *ngIf="arr.length > 0">
+
+    <li *ngFor="let i of arr">{{i}}</li>
+</ul>
+
+<!---10 -->
+
+@if(isloggedin){
+    <p>login sucessfully</p>
+}@else {
+    <p>logout Sucessfully</p>
+}
+
+<button (click)="login()" *ngIf="!isloggedin">login</button>
+
+
+<button (click)="logout()" *ngIf="isloggedin">logout</button>
+<br>
+<br>
+<hr>
+<!---10 -->
+
+
+<form *ngIf="!showForm">
+
+    <label for="">Name:</label>
+    <input type="text"> <br>
+
+    <label for="">Email:</label>
+    <input type="text">
+</form>
+<br><br>
+<button (click)="showform()">{{!showForm? 'hide Form' :'showform '}}</button>
+
+<!---11 -->
+
