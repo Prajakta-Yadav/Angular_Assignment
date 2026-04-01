@@ -1,0 +1,13 @@
+li {
+    cursor: pointer;
+
+    padding: 8 px;
+
+}
+
+
+.active{
+    background-color: balck;
+    color: white;
+    
+}

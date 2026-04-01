@@ -1,3 +1,4 @@
+    
 <p>directive works!</p>
 
 <!--1 NgIf -->
@@ -28,7 +29,7 @@
 
 <ul *ngIf="arr.length > 0">
 
-    <li *ngFor="let i of arr">{{i}}</li>
+    <li *ngFor= "let i of arr">{{i}}</li>
 </ul>
 
 <!---10 -->
@@ -62,3 +63,174 @@
 
 <!---11 -->
 
+<h3>List of student name: </h3>
+
+<div *ngFor= "let name of nameArray; let i = index">
+    {{i+1}} - {{name}}</div>
+
+<!---12 & 13 -->
+
+<h3>Student Object list</h3>
+
+<div *ngFor= "let s of Student; let i = index">
+
+ {{i}}  id: {{s.id}} name: {{s.name}}  age: {{s.age}}
+</div>
+
+<!---14 -->
+
+<h3>Student Result</h3>
+
+<div  *ngFor= "let R of StudResult; let i = index;">
+    @if(R.mark <= 50){
+        {{R.Sname}} : {{R.mark}}
+    }
+
+</div>
+
+<!---15 -->
+
+<h3>Dyanamic Array item</h3>
+
+<input [(ngModel)]= "newitem" type="text"> <br>
+
+<button (click)="Additem()">Add Item</button>
+
+<ul>
+    <li *ngFor= "let D of DynamicArr";>
+        {{D}}
+    </li>
+
+    <h3>Dynamic List</h3>
+    {{DynamicArr}}
+</ul>
+
+<!---16 -->
+
+<select [(ngModel)]="SelectedValue">
+  <option value="">Select</option>
+  <option value="home">Home</option>
+  <option value="about">About</option>
+  <option value="contact">Contact</option>
+</select>
+
+<div [ngSwitch]="SelectedValue">
+
+    @switch (SelectedValue) {
+        @case ('home') {
+            <p>Home panel Visible</p>
+        }
+        @case ('about') {
+            <p>About panel Visible</p>
+        }
+        @case ('contact') {
+            <p>Contact panel Visible</p>
+        }
+        @default {
+            <p>Please select option</p>
+        }                       
+    }
+</div>
+
+<br> <hr>
+<!-- 17 -->
+
+<select [(ngModel)]="role">
+    <option value="" name="select">Select</option>
+    <option value="admin" name="admin">Admin</option>
+    <option value="user" name="user">User</option>
+</select>
+
+<div [ngSwitch]="role">
+    @switch (role) {
+        @case ('admin') {
+            <h3>Admin Panel</h3>
+            <button>Manage Users</button>
+            <button>Manage Reports</button>
+        }
+
+        @case ('user') {
+            <h3>User Panel</h3>
+            <button>User DashBoard</button>
+            <button>User Profile</button>
+        }
+        @default {
+            <p>Please Select Role</p>
+        }
+    }
+
+</div>
+<br> <hr>
+<!-- 20 -->
+
+<!-- ngModel + event binding -->
+<select [(ngModel)]="selectedOption" (change)="onChange($event)">
+  <option value="">Select</option>
+  <option value="student">Student</option>
+  <option value="teacher">Teacher</option>
+  <option value="admin">Admin</option>
+</select>
+
+<!-- ngSwitch rendering -->
+<div [ngSwitch]="selectedOption">
+    @switch (selectedOption) {
+        @case ('student') {
+            <h3>Student Panel</h3>
+            <p>View courses and marks</p>
+        }
+        @case ('teacher') {
+            <h3>Teacher Panel</h3>
+            <p>Manage Classes and students</p>
+        }
+        @case ('admin') {
+            <h3>Admin Panel</h3>
+            <p>System management access</p>
+        }
+        @default {
+            <p>Please select option</p>
+        }
+    }
+
+</div>
+
+
+<br><br>
+
+<!-- 21 -->
+
+
+<input type="text"  [(ngModel)] = "username"  placeholder="Enter name"> <br>
+
+<p  [ngClass]= "username?  'success' : 'error'"  > {{username? "Valid Username" : 'username Required'}} </p>
+
+<br>
+
+<hr>
+
+<!-- 22 -->
+
+<div [ngClass]="{
+
+    'active' : isActive,
+    'error'  : hasError,
+    'disabled' : isDisabled
+    
+}"> Status Box</div>
+
+<!-- 23 -->
+
+<p [ngStyle]="{
+    color : isError? 'red' :'green'
+}"   >Status Message</p>
+
+
+<!-- 24 -->
+
+<p appHightlight> This is a hightlight style. </p>
+
+<h1>Hello World</h1>
+
+<h3 appHighlight> hightlight Directive</h3>
+
+
+<footer>Prajakta Yadav</footer>

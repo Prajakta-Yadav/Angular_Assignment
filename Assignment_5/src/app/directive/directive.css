@@ -7,3 +7,18 @@
 .highlight{
     background-color: yellow;
 }
+
+footer{
+    background-color: bisque;
+    padding: 15px;
+    text-align: center;
+    font-style: italic;
+}
+
+.success{
+    color: green;
+}
+
+.error {
+    color: red;
+}

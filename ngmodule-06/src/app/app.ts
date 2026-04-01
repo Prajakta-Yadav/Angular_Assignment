@@ -1,14 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterLink, RouterOutlet],
   templateUrl: './app.html',
+  standalone: false,
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('Assignment_5');
-
-
+  protected readonly title = signal('ngmodule-06');
 }
