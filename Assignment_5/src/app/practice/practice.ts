@@ -12,5 +12,9 @@ import { Hightlight } from '../hightlight';
 })
 export class Practice {
 
+isDark: boolean = true;
 
+toggleMe(){
+  this.isDark = !this.isDark;
+}
 }

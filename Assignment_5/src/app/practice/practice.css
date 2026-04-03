@@ -11,3 +11,18 @@ li {
     color: white;
     
 }
+
+.container{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+.dark-Mode{
+    background-color: black;
+    color: white;
+}
+
+.light-Mode{
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,49 @@
+<div style="width: 300px; margin: auto;">
+
+    <h2>FormControl Form</h2>
+
+    <input [formControl]="name" type="text"  placeholder="Enter Your Name">
+    @if(name.invalid && name.touched){
+     
+        <div class="error">Name Required</div>
+    }
+
+    <br>
+
+    <input [formControl]="email" type="email" placeholder="Enter Your Email">
+     @if(email.invalid && email.touched){
+     
+        <div class="error">Email Required</div>
+    }
+
+    <br>
+
+    <input [formControl]="password" type="password" placeholder="Enter Password">
+     @if(password.invalid && password.touched){
+     
+        <div class="error">Password Required</div>
+    }
+
+    <br>
+
+    <input [formControl]="age" type="number" placeholder="Enter Your Age">
+
+     @if(age.invalid && age.touched){
+     
+        <div class="error">Age Required</div>
+    }
+
+    <br>
+
+    <input [formControl]="city" type="text" placeholder="City">
+
+     @if(city.invalid && city.touched){
+     
+        <div class="error">City Required</div>
+    }
+
+    <br>
+
+    <button style="background-color: green; padding: 10px;"  (click)="onSubmit()">Submit</button>
+
+</div>

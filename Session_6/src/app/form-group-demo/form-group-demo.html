@@ -1,0 +1,27 @@
+<h1>form-group-demo works!</h1>
+
+<div class="container">
+    <h3>Employee Form Group</h3>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+
+        <input type="text" placeholder="Enter Name"  formControlName="name">
+        <br>
+
+        <input type="email" placeholder="Enter Email" formControlName="email">
+        <br>
+
+        <select  formControlName="gender">
+            <option value="">select option</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+
+        <button class="Success">Submit</button>
+
+
+
+    </form>
+</div>

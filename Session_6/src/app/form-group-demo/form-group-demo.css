@@ -1,0 +1,47 @@
+h1{
+    text-align: center;
+    margin: 10px;
+}
+
+div{
+    display: block;
+    width: 70%;
+    text-align: center;
+    background-color: bisque;
+    margin-left: 20%;
+
+}
+
+h3{
+    padding: 10px;
+}
+
+form{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    height: 50vh;
+}
+
+select{
+    padding: 10px;
+    margin: 10px;
+   
+}
+
+input{
+    padding: 10px
+}
+
+.Success{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.Success:hover{
+    cursor: pointer;
+}
