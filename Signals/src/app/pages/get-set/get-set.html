@@ -1,0 +1,7 @@
+<p>get-set works!</p>
+
+<p>Value: {{name()}}</p>
+
+<input type="text"  [value]="name()"  (input)="setValue($event.target.value)"> <br>
+
+<button (click)="resetValue()">ResetValue</button>

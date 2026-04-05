@@ -1,4 +1,4 @@
-<p>login works!</p>
+
 
 <form #f="ngForm" (ngSubmit)="onSubmit(f)">
 
@@ -9,17 +9,31 @@
 
             <div class="mb-4">
                 <label class="form-label m-2" for="name">Username</label>
-                <input type="text" name="username" [(ngModel)]="user.username" class="form-control">
+                <input type="text" name="username" [(ngModel)]="user.username" class="form-control" #usernameCtrl="ngModel"  minlength="3"  required>
+                @if (usernameCtrl.invalid && usernameCtrl.touched) {
+                    <div class="text-danger">Username must be at least 3 characters</div>
+                }
+
             </div>
 
              <div class="mb-4">
                 <label class="form-label m-2" for="email">Email</label>
-                <input type="text" name="email" [(ngModel)]="user.email"  class="form-control">
+                <input type="text" name="email" [(ngModel)]="user.email"  class="form-control" #emailCtrl="ngModel" required>
+
+                 @if (emailCtrl.invalid && emailCtrl.touched) {
+                    <div class="text-danger">Invalid Email</div>
+                }
             </div>
     
              <div class="mb-4">
                 <label class="form-label m-2" for="password">Password</label>
-                <input type="password" name="passsword" [(ngModel)]="user.password"  class="form-control">
+                <input type="password" name="password" [(ngModel)]="user.password"  class="form-control"  #passwordCtrl="ngModel" required>
+
+                 @if (passwordCtrl.invalid && passwordCtrl.touched) {
+                    <div class="text-danger">Invalid Password</div>
+                }
+
+                
             
             </div>
     
