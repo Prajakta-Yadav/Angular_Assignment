@@ -1,0 +1,54 @@
+<p>control-for works!</p>
+
+<h1>Users</h1>
+
+<ul>
+    @for(U of users(); track users()){
+       <li>{{U}}</li> 
+    }
+</ul>
+
+<hr>
+
+<table>
+
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Email</th>
+    </tr>
+
+    @for(user of usersDetails(); track user.id){
+
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.surname}}</td>
+            <td>{{user.email}}</td>
+        </tr>
+
+    }
+</table>
+
+
+<ul>
+
+    @for(user of usersDetails(); track user.id){
+        <li [style.backgroundColor]="$odd? '#ccc': '#fff'" > 
+            <span>{{$index+1}} {{user.name + " " + user.surname}} 
+                @if($first){<span style="color: red;">Admin</span>}
+            </span>
+
+            
+
+            <span>@if($count == $index+1){
+                
+                <br><br>
+                <span><b>Total Users </b> {{$count}}</span>
+            
+            }</span>
+        </li>
+    }
+
+</ul>

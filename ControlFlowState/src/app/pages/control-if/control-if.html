@@ -1,0 +1,51 @@
+<p>control-if works!</p>
+
+<h1>Control Flow statement</h1>
+
+<div>
+    @if (isLogin()) {
+        <span>Welcome, User</span> <br>
+        <button (click)="handleLogin(false)">Logout</button> 
+    } @else {
+        <span>Please Login</span><br>
+        <button (click)="handleLogin(true)">Login</button>
+    }
+</div>
+<hr/>
+
+<h1>Without function using signal its toggle</h1>
+
+@if (show()) {
+    <button (click)="show.set(false)">Hide</button>
+}@else {
+    <button (click)="show.set(true)">Show</button>
+}
+
+<hr>
+
+<h1>Check Status</h1>
+
+<select (change)="handleStatus($event)">
+
+    <option value= "notStarted">Not Started</option>
+    <option value="progress">In Progress</option>
+    <option value="success">Success</option>
+    <option value="error">Error</option>
+</select>
+<br>
+
+@if (status() == "notStarted") {
+    <span style="color:blue;">No Status</span>
+
+} @else if (status() == "progress") {
+    <span style="color:orange;">In Progress</span>
+
+}@else if (status() == "success") {
+    <span style="color:green;">Success</span>
+
+}@else if(status() == "error"){
+    <span style="color:red;">Error</span>
+
+} @else {
+    <span style="color: blue;">No Status</span>
+}

@@ -1,0 +1,26 @@
+<p>control-switch works!</p>
+
+<h1>Switch | Control Flow Statement</h1>
+
+<select (change)="handleSwitch($event)">
+    <option value="notStarted">Not Started</option>
+    <option value="loading">loading in progress</option>
+    <option value="success">Success</option>
+    <option value="error">Error or Other</option>
+</select>
+<br><br>
+
+@switch (status()) {
+    @case ('notStarted') {
+        <span style="color: blue;">NO update Yet</span>
+    }
+    @case ('loading') {
+        <span style="color: orange;">loading in Progress</span>
+    }
+    @case ('success') {
+        <span style="color: green;">Success</span>
+    }
+    @default {
+        <span style="color: red;">Error</span>
+    }
+}
