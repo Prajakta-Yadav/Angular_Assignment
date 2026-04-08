@@ -1,0 +1,69 @@
+<h1  class="text-center">Todo List</h1>
+
+
+<div>
+    <div class="card-item">
+        <div>
+            <label for="name">Task Name: </label>
+            <input type="text" placeholder="Enter Your Task" [value]="title()" (input)="title.set($event.target.value)">
+
+            <label for="priority"> Task Priority:</label>
+            <select (change)= "handlePriority($event)">
+                <option value="">Please Select</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+
+            <label for="status"> Task Status:</label>
+            <select (change)= "handleStatus($event)">
+
+                <option value= "">Please Select</option>
+                <option value="In progress">In progress</option>
+                <option value="Completed">Completed</option>
+                <option value="Pending">Pending</option>
+            </select>
+        </div>
+
+        <div>
+             <button (click)="addTask()">Add Task</button>
+
+        </div>
+
+        <ul>
+            @for (task of tasks(); track task.Id) {
+                <li><span>{{task.Id}} </span> <span>{{task.title}}</span>
+                
+                     <button>Update</button>
+                     <button (click)="deleteTask(task.Id)">Delete</button>
+                </li>
+            }
+
+            @empty {
+                <span>Not task added</span>
+            }
+        </ul>
+
+        <div>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                </tr>
+                
+                 @for (task of tasks(); track task.Id) {
+                <tr>
+                    <td>{{task.Id}}</td>
+                    <td>{{task.title}}</td>
+                    <td>{{task.priority}}</td>
+                    <td>{{task.status}}</td>
+                </tr>
+
+            }
+            </table>
+        </div>
+
+    </div>
+</div>
