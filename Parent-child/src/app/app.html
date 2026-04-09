@@ -1,0 +1,23 @@
+<h3>Selected User: {{selectUserName()}}</h3>
+
+<input type="text" [value]="newUser()" (input)="newUser.set($event.target.value)"  placeholder="Enter New Username">
+
+<button (click)="addNewUser()">AddNewUser</button>
+
+
+@for(user of users(); track user){
+  
+ 
+<app-child
+ 
+[userName]="user"
+
+(seletedUser)="selectdUser($event)"
+
+(deleteUser)="deleteUser($event)"
+
+ >
+
+
+</app-child>
+}
