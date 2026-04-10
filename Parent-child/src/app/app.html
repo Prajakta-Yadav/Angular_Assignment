@@ -1,3 +1,5 @@
+<h1>Parent-Child Communication</h1>
+
 <h3>Selected User: {{selectUserName()}}</h3>
 
 <input type="text" [value]="newUser()" (input)="newUser.set($event.target.value)"  placeholder="Enter New Username">
@@ -17,7 +19,19 @@
 (deleteUser)="deleteUser($event)"
 
  >
-
-
 </app-child>
 }
+
+
+<hr>
+<hr>
+
+
+<h1>Global State with signal</h1>
+
+
+<app-display-count></app-display-count>
+
+<hr>
+
+<app-control-count></app-control-count>

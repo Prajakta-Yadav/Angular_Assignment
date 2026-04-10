@@ -1,0 +1,60 @@
+
+<button (click)="state.increment()">Increment</button>
+
+<button (click)="state.decrement()">Decrement</button>
+
+<hr>
+
+<h1>Pipes</h1>
+
+<p>{{title | uppercase}}</p>
+
+<p>{{title | titlecase}}</p>
+
+<br>
+
+
+<h2>{{name() | titlecase}}</h2>
+<input type="text" (input)="name.set($event.target.value)">
+<br>
+<br>
+
+<h3>I bought a {{mobile |titlecase}} mobile on {{date | date}} in {{amount | currency:'INR'}}</h3>
+
+
+<br>
+
+<p>date: {{today | date}}</p>
+
+<p>date: {{today | date:'mm'}}</p>
+<p>date: {{today | date:'dd'}}</p>
+<p>date: {{today | date: 'yy'}}</p>
+<p>date: {{today | date:'full'}}</p>
+<p>date: {{today | date:'short'}}</p>
+
+
+<hr>
+
+<h2>{{user()}}</h2>
+
+<h2>{{user().name}}</h2>
+
+
+<h2>{{user() | json}}</h2>
+
+<hr>
+
+<hr>
+
+<h1>{{printState | trimText | uppercase}}</h1>
+
+
+<h1>{{'My name is Prajakta Yadav' | trimText: 6}}</h1>
+
+<hr>
+<hr>
+<h1>Currency Convertor Pipe</h1>
+
+<h3> $20 : {{CustomAmount() | currencyConvertor | currency:'INR'}}</h3>
+
+<h3> $20 : {{CustomAmount() | currencyConvertor:120 | currency:'INR'}}</h3>

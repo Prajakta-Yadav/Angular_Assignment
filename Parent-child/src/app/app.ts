@@ -2,10 +2,12 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Child } from "./child/child";
 import { FormsModule } from '@angular/forms';
+import { ControlCount } from "./control-count/control-count";
+import { DisplayCount } from "./display-count/display-count";
 
 @Component({
   selector: 'app-root',
-  imports: [ Child, FormsModule],
+  imports: [Child, FormsModule, ControlCount, DisplayCount],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

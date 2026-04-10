@@ -8,7 +8,10 @@ export class Counter {
   count = signal(0)
 
   decrement(){
-    this.count.update((c) => c-1)
+    if(this.count() > 0){
+      this.count.update((c) => c-1)
+    }
+    
   }
 
   increment(){
