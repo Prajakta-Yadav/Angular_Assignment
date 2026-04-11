@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './contact.css',
 })
 export class Contact {
-  userId : any;
+  userId : any = signal('');
 
   constructor(private route:ActivatedRoute){}
 

@@ -5,6 +5,7 @@ import { Dashboard } from '../layout/dashboard/dashboard';
 import { User } from '../layout/user/user';
 import { Reports } from '../layout/reports/reports';
 import { Users } from '../layout/users/users';
+import { StudentLayout } from '../layout/student-layout/student-layout';
 
 export const routes: Routes = [
     {path: '',
@@ -19,6 +20,9 @@ export const routes: Routes = [
                 ]
             },
             {path: 'employee', component:User},
+             {path:'student-layout', component: StudentLayout},
+             {path:'student-layout/:name', component: StudentLayout},
+            {path:'student-layout/:name/:age', component: StudentLayout}
         ],
     },
 

@@ -3,13 +3,33 @@
 <div>
     <div>
          <a routerLinkActive="active" routerLink="admin" >Admin</a>
-         <a routerLinkActive="active" routerLink="employee" [queryParams]="{id:1, name:'Praju'}">Employee</a>
+         <a routerLinkActive="active" routerLink="employee" [queryParams]="{id:userData().id, name: userData().name, age:userData().age}">Employee</a>
     <br>
 
      <a routerLinkActive="active" routerLink="employee" [queryParams]="{id:2, name:'Teju'}">Employee Second</a>
+<br>
+
+     <button (click)="gotoProfile()"> Go to Profile</button>
     
  </div>
 
+ <hr>
+
+ <br>
+
+ <a routerLink="/student-layout/prajakta">Go to student page</a> 
+ 
+ <br>
+
+ <a [routerLink]="['/student-layout', userData().name, userData().age]">Go to student page</a> 
+
+ <br> 
+
+ <hr>
+
+ <button (click)="gotoStudent()">Goto StudentLayout</button>
+
+ <button routerLink="/student-layout">About</button>
     <div>
         <router-outlet></router-outlet>
     </div>
