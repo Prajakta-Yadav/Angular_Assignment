@@ -1,0 +1,35 @@
+<p>signal-forms works!</p>
+
+<h1>Forms with Signals</h1>
+
+<input type="text" placeholder="Enter Email" [formField]="loginForm.email">
+
+@if (loginForm.email().touched() && loginForm.email().invalid()) {
+    <ul>
+        @for (error of loginForm.email().errors(); track error) {
+            <li>{{error.message}}</li>
+        }
+    </ul>
+}
+<br><br>
+
+<input type="password" placeholder="Enter Password" [formField]="loginForm.password">
+
+@if (loginForm.password().touched()  && loginForm.password().invalid()) {
+    <ul>
+      @for (error of loginForm.password().errors(); track error) {
+        <li>{{error.message}}</li>
+      }
+    </ul>
+
+}
+
+<br><br>
+
+<button [disabled]="loginForm().invalid()" (click)="login()">Login</button>
+
+<button (click)="reset()">Reset</button>
+
+
+<h3>{{loginForm.email().value()}}</h3>
+<h3>{{loginForm.password().value()}}</h3>

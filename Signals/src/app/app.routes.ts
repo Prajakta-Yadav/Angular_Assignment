@@ -14,5 +14,6 @@ export const routes: Routes = [
     {path: 'effect', component: Effect},
     {path: 'get-set', component: GetSet},
     {path: 'counter-app', component: CounterApp},
-    {path: 'products', component: Products}
+    {path: 'products', component: Products},
+
 ];

@@ -2,6 +2,10 @@
 
     <h2>FormControl Form</h2>
 
+
+    <h3>Name: {{name.value}}</h3>
+    <h3>Email: {{email.value}}</h3>
+
     <input [formControl]="name" type="text"  placeholder="Enter Your Name">
     @if(name.invalid && name.touched){
      
