@@ -1,0 +1,116 @@
+{
+  "Students": [
+    {
+      "name": "Prajakt Yadav",
+      "email": "prajaktay67@gmail.com",
+      "age": 23,
+      "address": "Karad",
+      "Password": "Praj@2345",
+      "id": 1
+    },
+    {
+      "name": "Prachi patil",
+      "email": "prachi56@gmail.com",
+      "age": 23,
+      "address": "Karad",
+      "Password": "765489",
+      "id": 12
+    },
+    {
+      "name": "Madhura",
+      "email": "prajaktayadav2883@gmail.com",
+      "age": 20,
+      "address": "Karad",
+      "Password": "765489",
+      "id": 14
+    },
+    {
+      "name": "Prajakta Yadav",
+      "email": "prajaktayadav2883@gmail.com",
+      "age": 22,
+      "address": "Karad",
+      "Password": "765489",
+      "id": 15
+    },
+    {
+      "name": "komal ",
+      "email": "komal@34gmaill.com",
+      "age": 21,
+      "address": "Karad",
+      "Password": "765489",
+      "id": 16
+    },
+    {
+      "name": "Pranjal Patil",
+      "email": "pranjalpatil34@gmail.com",
+      "age": 23,
+      "address": "tasgaon",
+      "Password": "ptysdsn",
+      "id": 17
+    }
+  ],
+  "Teacher": [
+    {
+      "id": 201,
+      "Name": "Sandip Deshmukh",
+      "age": 45,
+      "email": "sandip@34gmail.com",
+      "address": "Chandoli",
+      "Password": "DeshMukh#78"
+    },
+    {
+      "id": 202,
+      "Name": "Meena Joshi",
+      "age": 39,
+      "email": "meena.joshi@gmail.com",
+      "address": "Pune",
+      "Password": "Meena@456"
+    },
+    {
+      "id": 203,
+      "Name": "Rajesh Shinde",
+      "age": 50,
+      "email": "rajesh.shinde@gmail.com",
+      "address": "Sangli",
+      "Password": "Rajesh#321"
+    }
+  ],
+  "Admin": [
+    {
+      "id": 111,
+      "Name": "AdminBusManager",
+      "password": "Admin@1234"
+    },
+    {
+      "id": 112,
+      "Name": "SuperAdmin",
+      "password": "Super@5678"
+    }
+  ],
+  "EnrollBus": [
+    {
+      "EnrollID": 901,
+      "Role": "Student",
+      "Duration": "monthly",
+      "BusFee": "INR 2000"
+    },
+    {
+      "EnrollID": 501,
+      "Role": "Teacher",
+      "Duration": "Yearly",
+      "BusFee": "INR 16000"
+    },
+    {
+      "EnrollID": 902,
+      "Role": "Student",
+      "Duration": "Yearly",
+      "BusFee": "INR 18000"
+    },
+    {
+      "EnrollID": 503,
+      "Role": "Teacher",
+      "Duration": "Monthly",
+      "BusFee": "INR 1800"
+    }
+  ]
+}
