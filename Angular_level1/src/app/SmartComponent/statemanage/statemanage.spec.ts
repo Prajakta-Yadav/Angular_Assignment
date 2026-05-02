@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComponentB } from './component-b';
+import { Statemanage } from './statemanage';
 
-describe('ComponentB', () => {
-  let component: ComponentB;
-  let fixture: ComponentFixture<ComponentB>;
+describe('Statemanage', () => {
+  let component: Statemanage;
+  let fixture: ComponentFixture<Statemanage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ComponentB]
+      imports: [Statemanage]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ComponentB);
+    fixture = TestBed.createComponent(Statemanage);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

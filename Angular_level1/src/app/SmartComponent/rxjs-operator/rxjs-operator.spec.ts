@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComponentA } from './component-a';
+import { RxjsOperator } from './rxjs-operator';
 
-describe('ComponentA', () => {
-  let component: ComponentA;
-  let fixture: ComponentFixture<ComponentA>;
+describe('RxjsOperator', () => {
+  let component: RxjsOperator;
+  let fixture: ComponentFixture<RxjsOperator>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ComponentA]
+      imports: [RxjsOperator]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ComponentA);
+    fixture = TestBed.createComponent(RxjsOperator);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
